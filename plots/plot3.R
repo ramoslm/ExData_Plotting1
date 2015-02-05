@@ -15,6 +15,10 @@ dt <- paste(data$Date, data$Time)
 data$Time <- strptime(dt, format = "%Y-%m-%d %H:%M:%S")
 
 ### Plot ###
+# Open device
+png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot3.png",
+    width=480, height=480, units="px")
+
 plot(data$Time,
      data$Sub_metering_1,
      type="l",
@@ -24,7 +28,7 @@ plot(data$Time,
 lines(data$Time, data$Sub_metering_2, col="red")
 lines(data$Time, data$Sub_metering_3,col="blue")
 legend("topright", col=c("black","red","blue"), c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),
-       lty=c(1,1), lwd=c(1,1))
-dev.copy(png, file="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot3.png",
-         width=480, height=480)
+       lty=c(1,1), lwd=c(1,1), y.intersp = 0.8)
+
+# Close device
 dev.off()

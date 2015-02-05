@@ -15,6 +15,8 @@ dt <- paste(data$Date, data$Time)
 data$Time <- strptime(dt, format = "%Y-%m-%d %H:%M:%S")
 
 ### Plot ###
+png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot4.png", width=480, height=480)
+
 par(mfrow=c(2,2))
 
 # Plot 1
@@ -40,7 +42,7 @@ plot(data$Time,
 lines(data$Time, data$Sub_metering_2, col="red")
 lines(data$Time, data$Sub_metering_3, col="blue")
 legend("topright", col=c("black","red","blue"), c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),
-       lty=c(1,1), bty="n", cex=.1)
+       lty=c(1,1), bty="n")
 
 # Plot 4
 plot(data$Time,
@@ -49,6 +51,5 @@ plot(data$Time,
      xlab="datetime",
      ylab="Global_reactive_power")
 
-
-dev.copy(png, file="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot4.png", width=480, height=480)
+#dev.copy(png, file="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot4.png", width=480, height=480)
 dev.off()

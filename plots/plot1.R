@@ -15,12 +15,13 @@ dt <- paste(data$Date, data$Time)
 data$Time <- strptime(dt, format = "%Y-%m-%d %H:%M:%S")
 
 ### Plot ###
+png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot1.png",
+         width=480, height=480)
+
 hist(data$Global_active_power,
      col = "red",
      xlab = "Global Active Power (kilowatts)",
      main = paste("Global Active Power"))
 
-dev.copy(png, file="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot1.png",
-         width=480, height=480)
 dev.off()
 
