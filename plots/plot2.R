@@ -16,7 +16,7 @@ data$Time <- strptime(dt, format = "%Y-%m-%d %H:%M:%S")
 
 ### Plot ###
 png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot2.png",
-         width=480, height=480)
+         width=480, height=480, bg= "transparent")
 
 plot(data$Time,
      data$Global_active_power,

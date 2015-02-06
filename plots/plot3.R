@@ -17,7 +17,7 @@ data$Time <- strptime(dt, format = "%Y-%m-%d %H:%M:%S")
 ### Plot ###
 # Open device
 png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot3.png",
-    width=480, height=480, units="px")
+    width=480, height=480, bg= "transparent")
 
 plot(data$Time,
      data$Sub_metering_1,

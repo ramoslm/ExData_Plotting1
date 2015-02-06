@@ -15,7 +15,8 @@ dt <- paste(data$Date, data$Time)
 data$Time <- strptime(dt, format = "%Y-%m-%d %H:%M:%S")
 
 ### Plot ###
-png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot4.png", width=480, height=480)
+png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot4.png",
+    width=480, height=480, bg= "transparent")
 
 par(mfrow=c(2,2))
 
@@ -51,5 +52,4 @@ plot(data$Time,
      xlab="datetime",
      ylab="Global_reactive_power")
 
-#dev.copy(png, file="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot4.png", width=480, height=480)
 dev.off()
