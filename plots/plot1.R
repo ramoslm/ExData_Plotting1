@@ -1,5 +1,5 @@
 ### Load and Prepare data ##
-data<- read.table("/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/household_power_consumption.txt",
+data<- read.table("household_power_consumption.txt",
                   header = T,
                   sep = ";",
                   na.strings = c("?"),
@@ -15,7 +15,7 @@ dt <- paste(data$Date, data$Time)
 data$Time <- strptime(dt, format = "%Y-%m-%d %H:%M:%S")
 
 ### Plot ###
-png(filename="/home/lautaro/Documentos/data_analysis/cursos/analisis_exploratorio_de_datos/ExData_Plotting1/figure/plot1.png",
+png(filename="./figure/plot1.png",
          width=480, height=480, bg= "transparent")
 
 hist(data$Global_active_power,
